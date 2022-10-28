@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: democrm-app
   namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
@@ -10,5 +12,6 @@ spec:
     targetRevision: HEAD
     path: ./democrm
   destination:
-    server: https://34.116.222.43
+    server: https://kubernetes.default.svc
+    # server: https://34.116.222.43
     namespace: default

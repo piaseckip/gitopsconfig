@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: democrm-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: http://35.178.81.143/piaseckip/gitops.git
+    targetRevision: HEAD
+    path: ./democrm
+  destination:
+    server: https://34.116.222.43
+    namespace: default

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: democrm-app
+  name: democrm-appxd
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
